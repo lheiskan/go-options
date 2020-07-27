@@ -54,6 +54,8 @@ type config struct {
 
 	myPointerToInt        *int `options:"*"`
 	myPointerToRenamedInt *int `options:"*yourIntWithPointer"`
+
+	jsonTag string  `json:",omitempty"`
 }
 
 //go:generate go-options -func applyDifferent -option DifferentOption -new=false configWithDifferentApply

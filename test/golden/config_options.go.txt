@@ -222,3 +222,10 @@ func OptionYourIntWithPointer(o int) ApplyOptionFunc {
 		return nil
 	}
 }
+
+func OptionJsonTag(o string) ApplyOptionFunc {
+	return func(c *config) error {
+		c.jsonTag = o
+		return nil
+	}
+}
